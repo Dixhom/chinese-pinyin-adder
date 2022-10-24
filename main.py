@@ -57,7 +57,7 @@ def main():
     st.text('Not sure how to read Chinese characters? Add some pinyin to them!')
     sample_text = '长城（the Great Wall），又称万里长城，是中国古代的军事防御工事，是一道高大、坚固而且连绵不断的长垣，用以限隔敌骑的行动。长城不是一道单纯孤立的城墙，而是以城墙为主体，同大量的城、障、亭、标相结合的防御体系。'
     text = st.text_area(
-        label='Enter a Chinese text (below is a sample text)', value=sample_text)
+        label='Enter a Chinese text (below is a sample text)', value=sample_text, height=300)
 
     # execute button
     add_btn_ph = st.empty()
@@ -75,11 +75,11 @@ def main():
         text_wait.empty()
 
         st.subheader('🧧Pinyin ruby')
-        stc.html(ruby)
+        stc.html(ruby, height=300, scrolling=True)
         st.subheader('👲Original ruby')
-        st.text_area(label='', value=ruby)
+        st.text_area(label='', value=ruby, height=300)
         st.subheader('🥮Pinyin numerical expression')
-        st.text_area(label='', value=num)
+        st.text_area(label='', value=num, height=300)
 
 
 if __name__ == '__main__':
